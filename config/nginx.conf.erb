@@ -33,8 +33,8 @@ http {
 
 	server {
     listen <%= ENV["PORT"] || 443 %>;
-    #auth_basic           "Administrator’s Area";
-    #auth_basic_user_file ./htpasswd;server_name _;
+    auth_basic           "Administrator’s Area";
+    auth_basic_user_file ./htpasswd;server_name _;
 		keepalive_timeout 5;
 
 		location / {
